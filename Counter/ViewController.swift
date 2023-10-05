@@ -8,28 +8,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-
-    @IBOutlet weak var labelMeaning: UILabel!
     
-    @IBOutlet weak var counterLabel: UILabel!
-    var counter: Int = 0 {
+    
+    @IBOutlet weak var meaningLabel: UILabel!
+    
+    
+    @IBOutlet weak private var counterLabel: UILabel!
+    private var counter: Int = 0 {
         didSet {
             counterLabel.text = "\(counter)"
         }
     }
-    @IBOutlet weak var counterButton: UIButton!
+    @IBOutlet weak private var counterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    counter = 0
-        // Do any additional setup after loading the view.
+        counter = 0
     }
-
-
-    @IBAction func buttonDidTap(_ sender: Any) {
+    
+    
+    @IBAction private func buttonDidTap(_ sender: Any) {
         counter += 1
     }
 }
-
+ 
